@@ -38,5 +38,5 @@ jobs:
           PASSWORD: 'MoThuCryax=MKXUmEVh%)I;)p5N?qG@w'
         with:
           source: 'test.txt'
-          target: 'home/'
+          target: '/home/'
           
