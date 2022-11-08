@@ -24,6 +24,11 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
+      - name: Run a multi-line script
+        run: |
+           mkdir ../build
+           cp -TR . ../build
+           tar -cvf deploy.tar ../build/
       # Runs a single command using the runners shell
       - name: Deploy to Staging server
         uses: appleboy/scp-action@master
