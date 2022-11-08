@@ -37,5 +37,6 @@ jobs:
           HOST: ${{ secrets.REMOTE_HOST }}
           PASSWORD: 'MoThuCryax=MKXUmEVh%)I;)p5N?qG@w'
         with:
-          source: 'deploy.tar'
+          source: 'test.txt'
+          target: 'home/'
           
