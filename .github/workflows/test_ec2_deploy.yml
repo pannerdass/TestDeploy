@@ -35,7 +35,7 @@ jobs:
         env:
           USERNAME: ${{ secrets.REMOTE_USER }}
           HOST: ${{ secrets.REMOTE_HOST }}
-          PASSPHRASE: ${{ secrets.SSH_PRIVATE_KEY }}
+          KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         with:
           source: 'test.txt'
           target: '/home/'
