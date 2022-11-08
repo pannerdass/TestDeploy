@@ -33,4 +33,4 @@ jobs:
           PASSWORD: 'MoThuCryax=MKXUmEVh%)I;)p5N?qG@w'
         with:
           source: '.'
-          target: '/'
+          target: '/home/'
