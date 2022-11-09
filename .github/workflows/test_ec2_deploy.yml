@@ -37,7 +37,7 @@ jobs:
           port: 22
           user: ${{ secrets.REMOTE_USER }}
           password: 'Pass1234'
-          local: './'
+          local: 'deploy.tar'
           remote: '~/'
           pre_upload: echo "This will be executed before the upload!"
           post_upload: echo "This will be executed after the upload!"
