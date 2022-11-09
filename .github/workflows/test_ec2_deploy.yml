@@ -31,12 +31,13 @@ jobs:
            tar -cvf deploy.tar ../build/
       # Runs a single command using the runners shell
       - name: Deploy to Staging server
-        uses: cross-the-world/scp-pipeline@master
+        uses: moonpathbg/scp_uploader@latest
         with:
           host: ${{ secrets.REMOTE_HOST }}
-          pass: 'Pass1234s'
-          usern: ${{ secrets.REMOTE_USER }}
-          local: 'test.txt'
-          remote: 'home/'
+          port: 22
+          username: ${{ secrets.REMOTE_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          source: './'
+          target: '~/'
           
           
