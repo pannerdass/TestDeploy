@@ -31,13 +31,13 @@ jobs:
            tar -cvf deploy.tar ../build/
       # Runs a single command using the runners shell
       - name: Deploy to Staging server
-        uses: moonpathbg/scp_uploader@latest
+        uses: horochx/deploy-via-scp@master
         with:
           host: ${{ secrets.REMOTE_HOST }}
           port: 22
-          username: ${{ secrets.REMOTE_USER }}
+          user: ${{ secrets.REMOTE_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
-          source: './'
-          target: '~/'
+          local: './'
+          remote: '~/'
           
           
