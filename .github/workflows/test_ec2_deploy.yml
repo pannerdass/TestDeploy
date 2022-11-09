@@ -39,4 +39,5 @@ jobs:
         with:
           source: 'test.txt'
           target: 'home/'
+          rm: true
           
