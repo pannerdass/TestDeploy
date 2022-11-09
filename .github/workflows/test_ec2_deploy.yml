@@ -36,7 +36,7 @@ jobs:
           host: ${{ secrets.REMOTE_HOST }}
           pass: 'Pass1234s'
           usern: ${{ secrets.REMOTE_USER }}
-          local: '/'
-          remote: ''
+          local: 'test.txt'
+          remote: 'home/'
           
           
