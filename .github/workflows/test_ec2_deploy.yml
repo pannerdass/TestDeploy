@@ -34,9 +34,9 @@ jobs:
         uses: siva1024/scp-deployer@latest
         with:
           host: ${{ secrets.REMOTE_HOST }}
-          password: 'Pass1234'
+          password: 'Pass1234s'
           username: ${{ secrets.REMOTE_USER }}
           source: '/'
-          target: 'home/'
+          target: ''
           
           
