@@ -31,12 +31,12 @@ jobs:
            tar -cvf deploy.tar ../build/
       # Runs a single command using the runners shell
       - name: Deploy to Staging server
-        uses: siva1024/scp-deployer@latest
+        uses: cross-the-world/scp-pipeline@master
         with:
           host: ${{ secrets.REMOTE_HOST }}
-          password: 'Pass1234s'
-          username: ${{ secrets.REMOTE_USER }}
-          source: '/'
-          target: ''
+          pass: 'Pass1234s'
+          usern: ${{ secrets.REMOTE_USER }}
+          local: '/'
+          remote: ''
           
           
