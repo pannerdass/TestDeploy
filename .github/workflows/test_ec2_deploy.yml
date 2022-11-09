@@ -31,13 +31,17 @@ jobs:
            tar -cvf deploy.tar ../build/
       # Runs a single command using the runners shell
       - name: Deploy to Staging server
-        uses: horochx/deploy-via-scp@master
+        uses: mdallasanta/ssh-scp-deploy@master
         with:
           host: ${{ secrets.REMOTE_HOST }}
           port: 22
           user: ${{ secrets.REMOTE_USER }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          password: 'Pass1234'
           local: './'
           remote: '~/'
+          pre_upload: echo "This will be executed before the upload!"
+          post_upload: echo "This will be executed after the upload!"
+          ssh_options: -o StrictHostKeyChecking=no
+          scp_options: -v
           
           
